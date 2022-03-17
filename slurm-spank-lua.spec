@@ -1,4 +1,4 @@
-%global slurm_version  %(rpm -q slurm-devel --qf "%{VERSION}" 2>/dev/null)
+%global slurm_version  %(rpm -q slurm-devel --qf "%{VERSION}" 2>/dev/null | cut -d . -f 1,2)
 %define _use_internal_dependency_generator 0
 %define __find_requires %{_builddir}/find-requires
 
